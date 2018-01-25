@@ -1,0 +1,12 @@
+ask for interest in mathematical methodologies
+ask for prior experience in machine learning/neural networks
+basics of ml - supervised, unsupervised, reinforced
+heavy applications of NNs
+NN representation
+forw and back propogation with xor func
+housing price prediction
+binary classification
+Logistic Regression
+Vectorization - [ Log Reg + Grad Desc]
+
+Next level research scopes - Art. Intuition, Art. Deception
