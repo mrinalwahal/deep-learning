@@ -22,12 +22,17 @@ def think(input_layer, syn0, syn1):
 
 def train(input_layer, output_layer, syn0, syn1):
     for j in xrange(100000):
+        # Forward Propogation
         l1 = sigmoid(np.dot(input_layer,syn0))
-        l2 = sigmoid(np.dot(l1,syn1)) # Forward Propogation
+        l2 = sigmoid(np.dot(l1,syn1))
+
+        # Compute  Deltas
         l2_delta = (output_layer - l2)*(l2*(1-l2))
         l1_delta = l2_delta.dot(syn1.T) * (l1 * (1-l1))
+
+        # Backward Propogation (Update weights)
         syn1 += l1.T.dot(l2_delta)
-        syn0 += input_layer.T.dot(l1_delta) # Backward Propogation
+        syn0 += input_layer.T.dot(l1_delta)
 
 print "-"*60
 print "Before Training."
@@ -40,7 +45,7 @@ train(X,y, syn0, syn1)
 print think(X, syn0, syn1)
 print "-"*60
 
-print "New Inputs."
-x1 = np.array([ [0,0], [1,0], [1,1], [0,1]])
+print "Once Again New Inputs."
+x1 = np.array([ [0,1], [1,1], [0,1], [0,0]])
 print "X = ", x1
 print think(x1, syn0, syn1)
