@@ -45,7 +45,7 @@ train(X,y, syn0, syn1)
 print think(X, syn0, syn1)
 print "-"*60
 
-print "Once Again New Inputs."
-x1 = np.array([ [0,1], [1,1], [0,1], [0,0]])
+print "Changing Inputs as of 12.07.19"
+x1 = np.array([ [1,1], [1,0], [0,0], [0,1]])
 print "X = ", x1
 print think(x1, syn0, syn1)
