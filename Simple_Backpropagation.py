@@ -34,18 +34,18 @@ def train(input_layer, output_layer, syn0, syn1):
         syn1 += l1.T.dot(l2_delta)
         syn0 += input_layer.T.dot(l1_delta)
 
-print "-"*60
-print "Before Training."
-print "X = ", X
-print "Output = ",
-print think(X, syn0, syn1)
+print("-"*60)
+print("Before Training.")
+print("X = ", X)
+print("Output = "),
+print(think(X, syn0, syn1))
 
-print "After Training."
+print("After Training.")
 train(X,y, syn0, syn1)
-print think(X, syn0, syn1)
-print "-"*60
+print(think(X, syn0, syn1))
+print("-"*60)
 
-print "Changing Inputs as of 12.07.19"
+print("Testing on 18/08/22")
 x1 = np.array([ [1,1], [1,0], [0,0], [0,1]])
-print "X = ", x1
-print think(x1, syn0, syn1)
+print("X = ", x1)
+print(think(x1, syn0, syn1))
