@@ -21,7 +21,7 @@ def think(input_layer, syn0, syn1):
     return l2
 
 def train(input_layer, output_layer, syn0, syn1):
-    for j in xrange(100000):
+    for j in range(100000):
         # Forward Propogation
         l1 = sigmoid(np.dot(input_layer,syn0))
         l2 = sigmoid(np.dot(l1,syn1))
